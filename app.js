@@ -16,7 +16,7 @@ const requestMiddleware = (req, res, next) => {
 
 app.use(express.static('static'));
 app.use(express.json());
-app.use(express.urlencoded())
+app.use(express.urlencoded({extended: true}));
 
 app.use(requestMiddleware);
 
